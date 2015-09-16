@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ScrollViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-Fi-Saa">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="qh2-oa-HBN">
+                                <rect key="frame" x="280" y="282" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.1162637773" green="0.34672132350000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.4498861737" blue="0.1559124556" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="valueChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="l00-3X-bUD"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UPF-Fi-Saa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="3bt-cU-I51"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UPF-Fi-Saa" secondAttribute="trailing" constant="-16" id="7LI-5Y-qjm"/>
+                            <constraint firstItem="UPF-Fi-Saa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="O1w-ki-ha5"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UPF-Fi-Saa" secondAttribute="bottom" id="R9z-rv-ni8"/>
+                            <constraint firstAttribute="centerX" secondItem="qh2-oa-HBN" secondAttribute="centerX" id="fMw-pz-QGZ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qh2-oa-HBN" secondAttribute="bottom" constant="40" id="jYB-r9-psX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="qh2-oa-HBN" id="NkQ-k9-jLe"/>
+                        <outlet property="scrollView" destination="UPF-Fi-Saa" id="8Qb-Zp-2aG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
